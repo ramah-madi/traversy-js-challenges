@@ -3,7 +3,9 @@ function calculateTotalSalesWithTax(arr, tax) {
   arr.forEach((item) => {
     totalSales += item.price * item.quantity;
   });
-  return totalSales + (totalSales * tax) / 100;
+
+  const totalSalesWithTax = totalSales + (totalSales * tax) / 100;
+  return parseFloat(totalSalesWithTax.toFixed(2));
 }
 
 module.exports = calculateTotalSalesWithTax;
